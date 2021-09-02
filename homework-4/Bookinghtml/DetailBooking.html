@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="./style-nav.css" />
+      <link rel="stylesheet" href="./style.css" />
+      <script src="https://kit.fontawesome.com/7fd00abe59.js" crossorigin="anonymous"></script>
+      <title>BRI QMS</title>
+   </head>
+   <body>
+      <div>
+         <nav class="navbar navbar-expand d-flex flex-column align-items-start" id="sidebar">
+            <div class="container">
+               <div class="row justify-content-start my-row">
+                  <div class="col-md-1">
+                     <img src="./logo.png" alt="logo" width="50" />
+                  </div>
+                  <div class="col-md-1">
+                     <h3>BRI</h3>
+                  </div>
+               </div>
+            </div>
+            <ul class="navbar-nav d-flex flex-column mt-5 w-100">
+               <div class="nav-item w-100">
+                  <li>
+                     <a href="https://reactjs.org" class="nav-link text-light pl-4 link1"> <i class="fas fa-home"></i>Beranda </a>
+                  </li>
+                  <li>
+                     <a href="https://reactjs.org" class="nav-link text-light pl-4 link2"> <i class="far fa-bookmark"></i>Book Nomor Antrian </a>
+                  </li>
+                  <li>
+                     <a href="https://reactjs.org" class="nav-link text-light pl-4 link3"> <i class="fas fa-list"></i>Daftar Bank & Info Antrian </a>
+                  </li>
+                  <li>
+                     <a href="https://reactjs.org" class="nav-link text-light pl-4 link4"> <i class="far fa-user"></i>Sign Out </a>
+                  </li>
+               </div>
+            </ul>
+         </nav>
+
+         <div class="head border border-warning border-top-0 border-end-0 border-start-0">
+            <input type="checkbox" id="check" />
+            <label htmlFor="check" />
+
+            <div class="container p-2 my-container1">
+               <div class="row justify-content-start">
+                  <div class="col-md-1">
+                     <button class="btn">
+                        <i class="fas fa-bars" id="btn1"></i>
+                     </button>
+                  </div>
+                  <div class="col-md-1">
+                     <h4 class="br">Beranda</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container p-2 my-container1" style="margin-top: 5%; height: auto">
+            <form class="row text-start pt-3 pe-3" style="padding-left: 25%">
+               <h2 class="text-light mb-5">Detail Booking</h2>
+               <h5 class="d-inline-flex align-items-center text-light mb-5">Nomor Antrian &emsp;&emsp; :&nbsp;&nbsp;</h5>
+               <h5 class="d-inline-flex align-items-center text-light mb-5">Bank Tujuan &emsp;&emsp;&ensp;&nbsp; :&nbsp;&nbsp;</h5>
+               <h5 class="d-inline-flex align-items-center text-light mb-5">Keperluan Layanan :&nbsp;&nbsp;</h5>
+               <h5 class="text-light">Nomor antrian akan dilayani pada tanggal</h5>
+               <h5 class="text-light">(Tanggal dan jam)</h5>
+               <h5 class="text-light">Untuk mempercepat transaksi silahkan kunjungi (e-form)</h5>
+               <h5 class="text-warning">*Harap mendatangi kantor sebelum waktu pelayanan</h5>
+               <button type="button" class="btn btn-success d-flex align-items-end justify-content-end ms-auto rounded-pill border-0 me-4 text-light" style="width: fit-content">
+                  Layanan Selesai
+               </button>
+            </form>
+         </div>
+      </div>
+      <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+         crossorigin="anonymous"
+      ></script>
+   </body>
+
+   <script>
+      var btn1 = document.querySelector("#btn1");
+      var sidebar = document.querySelector("#sidebar");
+      var container1 = document.querySelector(".my-container1");
+      var container2 = document.querySelector(".my-container2");
+      btn1.addEventListener("click", () => {
+         sidebar.classList.toggle("active-nav");
+         container1.classList.toggle("active-cont");
+         container2.classList.toggle("active-cont");
+      });
+   </script>
+</html>
